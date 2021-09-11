@@ -1,9 +1,10 @@
 #Construir una función que reciba como parametro un entero y retorne su ultimo digito
-def ultimoDigito(num):
-    ultimo = num %  10
-    print(ultimo)
+def retornar_ultimo_digito(numero):
+    ultimo_digito = numero %  10
+    return ultimo_digito
 
-ultimoDigito(18)
+resultado = retornar_ultimo_digito(18)
+print('El ultimo digito es: %i' %resultado)
 
 #Construir un funcion que reciba como parametro un entero y retorne sus dos ultimos digitos
 
