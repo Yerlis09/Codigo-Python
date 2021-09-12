@@ -13,11 +13,15 @@ def retornar_ultimo_dos_digitos(numero):
         return 'Ingrese un valor valido, por favor'
     elif(numero == ""):
         return 'ingrese un valor por favor'
-    elif (numero > -100) and (numero <100):
+    elif (numero > -100) and (numero < 100):
         return 'Ingrese un valor menor a -100 y mayor a 100'
     else:
-        dosUltimosDigitos = str(numero)[-2:]
-        return dosUltimosDigitos
+        dos_ultimos_digitos = str(numero)[-2:]
+        return dos_ultimos_digitos
 
-resultado = retornar_ultimo_dos_digitos(None)
+resultado = retornar_ultimo_dos_digitos('')
 print( resultado)
+
+# Construir una funcion que reciba como parametro un entero y retorne la cantidad de digitos
+
+
