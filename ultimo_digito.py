@@ -9,8 +9,15 @@ print('El ultimo digito es: %i' %resultado)
 # Construir un funcion que reciba como parametro un entero y retorne sus dos ultimos digitos
 
 def retornar_ultimo_dos_digitos(numero):
-    dosUltimosDigitos = str(numero)[-2:]
-    return dosUltimosDigitos
+    if(numero == None):
+        return 'Ingrese un valor valido, por favor'
+    elif(numero == ""):
+        return 'ingrese un valor por favor'
+    elif (numero > -100) and (numero <100):
+        return 'Ingrese un valor menor a -100 y mayor a 100'
+    else:
+        dosUltimosDigitos = str(numero)[-2:]
+        return dosUltimosDigitos
 
-resultado = retornar_ultimo_dos_digitos(100)
-print('El resultado es: ' + resultado)
+resultado = retornar_ultimo_dos_digitos(None)
+print( resultado)
