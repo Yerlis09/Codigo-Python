@@ -37,3 +37,24 @@ def retornar_cantidad_de_digitos(numero):
         return longitud
 resultado = retornar_cantidad_de_digitos(-325)
 print(resultado)
+
+# construir una funcion que reciba como parametro un entero y retorne la cantidad de digitos pares
+
+def retornar_cantidad_de_digitos_pares(numero):
+    if (numero == None):
+        return 'Ingrese un valor valido'
+    elif (numero == '') and (numero < 0):
+        return 'Ingrese un valor o un numero entero positivo'
+    elif (numero == 1):
+        return 0
+    else:
+        cont = 0
+        for i in range(numero):
+            if (i % 2 == 0):
+                cont +=1
+        return cont
+
+resultado = retornar_cantidad_de_digitos_pares(2)
+print(resultado)
+
+    
