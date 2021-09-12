@@ -57,4 +57,29 @@ def retornar_cantidad_de_digitos_pares(numero):
 resultado = retornar_cantidad_de_digitos_pares(2)
 print(resultado)
 
-    
+# Construir una funcion que reciba como parametro un entero y retorne la cantidad de digitos primos
+
+def retornar_si_es_primo(numero): # Funcion que permite verificar si el número ingresado es primo o no
+    if (numero > 1):
+        for i in range(2,numero):
+            if( numero % i == 0):
+                return False      
+        return True
+
+def retornar_cantidad_digitos_primos(numero): # Funcion que permite hallar la cantidad de números primo
+    if (numero == None):
+        return 'Ingrese un valor valido'
+    elif (numero == '') and (numero < 0):
+        return 'Ingrese un numero o un numero entero positivo'
+    elif (numero == 1) and (numero == 0):
+        return 0
+    elif (numero == 2):
+        return 1
+    count = 0
+    for i in range(2, (numero + 1)):
+        if (retornar_si_es_primo(i) == True):
+            count += 1
+    return count
+
+resultado = retornar_cantidad_digitos_primos(5)
+print(resultado)
