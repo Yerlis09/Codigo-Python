@@ -8,15 +8,13 @@ print('El ultimo digito es: %i' %resultado)
 
 #Construir un funcion que reciba como parametro un entero y retorne sus dos ultimos digitos
 
-# def ultimosDosDigitos(num):
-#     if(num>=100):
-#         dosUltimos = (num % 100)
-#         print(dosUltimos)
-#     else:
-#         ultimo = (num % 10)
-#         print(ultimo)
+def retornar_ultimo_dos_digitos(numero):
+    dosUltimosDigitos = str(numero)[-2:]
+    return dosUltimosDigitos
 
-# ultimosDosDigitos(int(input('Ingrese un numero entero : ')))
+resultado = retornar_ultimo_dos_digitos(100)
+print('El resultado es: ' + resultado)
+
 
 # def cantidadDigito(num):
 #     longitud = len(str(num))
