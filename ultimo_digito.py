@@ -1,4 +1,4 @@
-#Construir una función que reciba como parametro un entero y retorne su ultimo digito
+# Construir una función que reciba como parametro un entero y retorne su ultimo digito
 def retornar_ultimo_digito(numero):
     ultimo_digito = numero %  10
     return ultimo_digito
@@ -6,49 +6,22 @@ def retornar_ultimo_digito(numero):
 resultado = retornar_ultimo_digito(18)
 print('El ultimo digito es: %i' %resultado)
 
-#Construir un funcion que reciba como parametro un entero y retorne sus dos ultimos digitos
+# Construir un funcion que reciba como parametro un entero y retorne sus dos ultimos digitos
 
-# def ultimosDosDigitos(num):
-#     if(num>=100):
-#         dosUltimos = (num % 100)
-#         print(dosUltimos)
-#     else:
-#         ultimo = (num % 10)
-#         print(ultimo)
+def retornar_ultimo_dos_digitos(numero):
+    if(numero == None):
+        return 'Ingrese un valor valido, por favor'
+    elif(numero == ""):
+        return 'ingrese un valor por favor'
+    elif (numero > -100) and (numero < 100):
+        return 'Ingrese un valor menor a -100 y mayor a 100'
+    else:
+        dos_ultimos_digitos = str(numero)[-2:]
+        return dos_ultimos_digitos
 
-# ultimosDosDigitos(int(input('Ingrese un numero entero : ')))
+resultado = retornar_ultimo_dos_digitos('')
+print( resultado)
 
-# def cantidadDigito(num):
-#     longitud = len(str(num))
-#     print(int(longitud))
-    
-# cantidadDigito(input('Ingrese un numero entero : '))
+# Construir una funcion que reciba como parametro un entero y retorne la cantidad de digitos
 
 
-# def pares(num):
-#     par = 0
-#     if(num == 1):
-#         return 0
-#     else:
-#         for i in range(1, num+1):
-#             if(i % 2 == 0):
-#                 par+=1
-#         return par
-
-# resultado = pares(int(input('Ingrese un numero entero : ')))
-# print('La cantidad de numeros pares es: %i'% resultado)
- 
-# def esPrimo(numero):
-#     primo = 0
-#     if numero <= 1:
-#         return 0
-#     elif numero == 2:
-#         return 1
-#     else:
-#         for i in range(2, numero):
-#             if i % 2 == 1:
-#                 primo+=1
-#         return primo
-
-# resultado = esPrimo(int(input('Ingrese un numero entero : ')))
-# print('La cantidad de numeros pares es: %i'% resultado)
