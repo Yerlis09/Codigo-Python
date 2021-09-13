@@ -11,7 +11,7 @@ print('El ultimo digito es: %i' %resultado)
 def retornar_ultimo_dos_digitos(numero):
     if(numero == None):
         return 'Ingrese un valor valido, por favor'
-    elif(numero == ""):
+    elif(numero == ""): 
         return 'ingrese un valor por favor'
     elif (numero > -100) and (numero < 100):
         return 'Ingrese un valor menor a -100 y mayor a 100'
@@ -42,7 +42,6 @@ print(resultado)
 
 def retornar_cantidad_de_digitos_pares(numero):
     if (numero == None):
-
         return 'Ingrese un valor valido'
     elif (numero == ''):
         return 'Ingrese un valor' 
@@ -86,5 +85,33 @@ def retornar_cantidad_digitos_primos(numero): # Funcion que permite hallar la ca
             count += 1
     return count
 
-resultado = retornar_cantidad_digitos_primos(2)
+resultado = retornar_cantidad_digitos_primos(10)
 print(resultado)
+
+# Construir una funcion que reciba como parametro un entero y retorne el codigo ASCII asociado a el
+
+def retornar_codigo_ascii_del_entero(entero):
+    if (entero == None):
+        return('Ingrese un valor valido, por favor')
+    elif (entero == ''):
+        return 'Ingrese un valor, por favor'
+    elif (type(entero) == str):
+        return 'Ingrese un entero positivo, por favor'
+    elif (entero < 0):
+        return 'Ingrese un valor superior a -1, por favor'
+    else:
+        codigo_ascii = ord(str(entero))
+        return codigo_ascii
+
+resultado = retornar_codigo_ascii_del_entero(7)
+print(resultado)
+
+# Construir una funcion que reciba como parametro un entero y retorne la cantidad de digitos primos
+
+def retornar_si_es_primo(numero): # Funcion que permite verificar si el número ingresado es primo o no
+    if (numero > 1):
+        for i in range(2,numero):
+            if( numero % i == 0):
+                return False      
+        return True
+
