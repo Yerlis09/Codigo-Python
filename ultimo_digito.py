@@ -24,4 +24,16 @@ print( resultado)
 
 # Construir una funcion que reciba como parametro un entero y retorne la cantidad de digitos
 
-
+def retornar_cantidad_de_digitos(numero):
+    if (numero == None):
+        return 'Ingrese un valor valido'
+    elif (numero == ''):
+        return 'Ingrese un valor, por favor'
+    elif (numero < 0):
+        longitud = int(len(str(numero))-1)
+        return longitud
+    else:
+        longitud = len(str(numero))
+        return longitud
+resultado = retornar_cantidad_de_digitos(-325)
+print(resultado)
