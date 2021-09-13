@@ -42,6 +42,7 @@ print(resultado)
 
 def retornar_cantidad_de_digitos_pares(numero):
     if (numero == None):
+
         return 'Ingrese un valor valido'
     elif (numero == ''):
         return 'Ingrese un valor' 
