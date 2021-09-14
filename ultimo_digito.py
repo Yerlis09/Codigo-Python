@@ -103,22 +103,19 @@ def retornar_codigo_ascii_del_entero(entero):
         codigo_ascii = chr(entero)
         return codigo_ascii
 
-<<<<<<< HEAD
 resultado = retornar_codigo_ascii_del_entero(36)
 print(resultado)
 
-# 
-=======
-resultado = retornar_codigo_ascii_del_entero(7)
-print(resultado)
+def obtener_catidad_digitos(numero = 0):
+    if isinstance(numero, str):
+        return 'Solo se aceptan numeros.'
 
-# Construir una funcion que reciba como parametro un entero y retorne la cantidad de digitos primos
+    cantidad_digitos = 0
+    while numero > 0:
+        cantidad_digitos += 1
+        numero = int(numero / 10)
+    return cantidad_digitos
 
-def retornar_si_es_primo(numero): # Funcion que permite verificar si el número ingresado es primo o no
-    if (numero > 1):
-        for i in range(2,numero):
-            if( numero % i == 0):
-                return False      
-        return True
-
->>>>>>> e151eaf9600c3080d28a1aa3cc91222c38e9210f
+print(obtener_catidad_digitos(25))
+print(obtener_catidad_digitos('Yerlis'))
+print(obtener_catidad_digitos(False))
