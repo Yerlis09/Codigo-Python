@@ -19,7 +19,7 @@ def retornar_ultimo_dos_digitos(numero):
         dos_ultimos_digitos = str(numero)[-2:]
         return dos_ultimos_digitos
 
-resultado = retornar_ultimo_dos_digitos('')
+resultado = retornar_ultimo_dos_digitos(1550)
 print( resultado)
 
 # Construir una funcion que reciba como parametro un entero y retorne la cantidad de digitos
@@ -30,7 +30,7 @@ def retornar_cantidad_de_digitos(numero):
     elif (numero == ''):
         return 'Ingrese un valor, por favor'
     elif (numero < 0):
-        longitud = int(len(str(numero))-1)
+        longitud = len(str(numero))-1
         return longitud
     else:
         longitud = len(str(numero))
@@ -51,12 +51,12 @@ def retornar_cantidad_de_digitos_pares(numero):
         return 0
     else:
         cont = 0
-        for i in range(numero):
+        for i in range(2,numero):
             if (i % 2 == 0):
                 cont +=1
         return cont
 
-resultado = retornar_cantidad_de_digitos_pares('')
+resultado = retornar_cantidad_de_digitos_pares(10)
 print(resultado)
 
 # Construir una funcion que reciba como parametro un entero y retorne la cantidad de digitos primos
@@ -81,11 +81,11 @@ def retornar_cantidad_digitos_primos(numero): # Funcion que permite hallar la ca
         return 1
     count = 0
     for i in range(2, (numero + 1)):
-        if (retornar_si_es_primo(i) == True):
+        if (retornar_si_es_primo(i)):
             count += 1
     return count
 
-resultado = retornar_cantidad_digitos_primos(10)
+resultado = retornar_cantidad_digitos_primos(None)
 print(resultado)
 
 # Construir una funcion que reciba como parametro un entero y retorne el codigo ASCII asociado a el
@@ -100,8 +100,10 @@ def retornar_codigo_ascii_del_entero(entero):
     elif (entero < 0):
         return 'Ingrese un valor superior a -1, por favor'
     else:
-        codigo_ascii = ord(str(entero))
+        codigo_ascii = chr(entero)
         return codigo_ascii
 
-resultado = retornar_codigo_ascii_del_entero(7)
+resultado = retornar_codigo_ascii_del_entero(36)
 print(resultado)
+
+# 
