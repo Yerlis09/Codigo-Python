@@ -127,7 +127,7 @@ def determinar_cual_es_el_numero_mayor(numero1, numero2):
         return('ingrese valores validos, por favor')
     elif (numero2 == '') and (numero1 == ''):
         return 'ingrese un valor, por favor'
-    elif (numero1 == '') and (numero2 == ''):
+    elif (type(numero1) == str) and (type(numero2) == str):
         return 'No se permite caracteres'
     else:
         list = [numero1, numero2]
@@ -136,3 +136,6 @@ def determinar_cual_es_el_numero_mayor(numero1, numero2):
 
 resultado = determinar_cual_es_el_numero_mayor(33,8)
 print(resultado)
+
+# Leer un numero entero de dos digitos y determinar si los dos digitos son iguales
+
