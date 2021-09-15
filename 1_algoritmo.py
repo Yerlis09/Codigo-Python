@@ -106,7 +106,7 @@ def retornar_codigo_ascii_del_entero(entero):
 resultado = retornar_codigo_ascii_del_entero(36)
 print(resultado)
 
-def obtener_catidad_digitos(numero = 0):
+def obtener_catidad_digitos(numero = 0): 
     if isinstance(numero, str):
         return 'Solo se aceptan numeros.'
 
@@ -119,3 +119,20 @@ def obtener_catidad_digitos(numero = 0):
 print(obtener_catidad_digitos(25))
 print(obtener_catidad_digitos('Yerlis'))
 print(obtener_catidad_digitos(False))
+
+#leer dos numeros enteros y determinar cual es el mayor
+
+def determinar_cual_es_el_numero_mayor(numero1, numero2):
+    if (numero1 == None) and (numero2 == None):
+        return('ingrese valores validos, por favor')
+    elif (numero2 == '') and (numero1 == ''):
+        return 'ingrese un valor, por favor'
+    elif (numero1 == '') and (numero2 == ''):
+        return 'No se permite caracteres'
+    else:
+        list = [numero1, numero2]
+        numero_mayor = max(list)
+        return numero_mayor
+
+resultado = determinar_cual_es_el_numero_mayor(33,8)
+print(resultado)
