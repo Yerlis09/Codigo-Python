@@ -129,3 +129,25 @@ def determinar_cual_es_el_numero_mayor(numero1, numero2):
         return max(numero1, numero2)
 resultado = determinar_cual_es_el_numero_mayor(25,89)
 print(resultado)
+
+
+# Leer un numero entero de dos digitos y determinar si los dos digitos son iguales.
+
+def determinar_si_dos_digitos_son_iguales(numero = 0):
+    if (numero == None):
+        return('ingrese valores validos, por favor')
+    elif (numero == ''):
+        return 'ingrese un valor, por favor'
+    elif isinstance(numero, str):
+        return 'No se permite este tipo de dato'
+    elif (numero < 10):
+        return 'Ingrese un numero entero mayor a 9'
+    else:
+        str_numero = (str(numero))
+        if (str_numero[0] == str_numero[1]):
+            return 'Son iguales'
+        else:
+            return 'No son iguales'
+
+resultado = determinar_si_dos_digitos_son_iguales(33)
+print(resultado)
