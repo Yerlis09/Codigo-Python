@@ -151,3 +151,20 @@ def determinar_si_dos_digitos_son_iguales(numero = 0):
 
 resultado = determinar_si_dos_digitos_son_iguales(33)
 print(resultado)
+
+# Leer dos numeros enteros de dos digitos y determinar si la suma de los dos numeros origina un numero par
+
+def determinar_si_la_suma_origina_un_numero_par(numero1 = 0, numero2 = 0):
+    if not numero1 or not numero2:
+        return('ingrese valores validos, por favor')
+    elif (numero1 < 10 and numero1 > -10) or (numero2 < 10 and numero2 > -10):
+            return 'Ingrese un valor de dos digitos, por favor'
+    else: 
+        resultado_suma = numero1 + numero2
+        if (resultado_suma % 2 == 0):
+            return 'Es par'
+        else: 
+            return 'No es par'
+
+resultado = determinar_si_la_suma_origina_un_numero_par(40,20)
+print(resultado)
