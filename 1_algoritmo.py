@@ -169,5 +169,23 @@ def determinar_si_la_suma_origina_un_numero_par(numero1 = 0, numero2 = 0):
 resultado = determinar_si_la_suma_origina_un_numero_par(10,20)
 print(resultado)
 
+# Leer dos numeros enteros de dos digitos y determinar a cuanto es igual la suma de todos los digitos
 
+def suma_digitos(numero):
+    if(numero < 0):
+        return sum([int(x) for x in str(numero)[1:]])
+    else:
+        return sum([int(x) for x in str(numero)])
+
+def determinar_la_suma_de_todos_los_digitos(numero1 = 0, numero2 = 0):
+    if not numero1 or not numero2:
+        return('ingrese valores validos, por favor')
+    else:
+        suma_digitos_1 = suma_digitos(numero1)
+        suma_digitos_2 = suma_digitos(numero2)
+
+    return suma_digitos_1, suma_digitos_2, suma_digitos_1 + suma_digitos_2
+
+resultado = determinar_la_suma_de_todos_los_digitos(-1,28)
+print(resultado)
 
