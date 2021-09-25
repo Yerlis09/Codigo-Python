@@ -189,3 +189,23 @@ def determinar_la_suma_de_todos_los_digitos(numero1 = 0, numero2 = 0):
 resultado = determinar_la_suma_de_todos_los_digitos(-1,28)
 print(resultado)
 
+# Leer un numero enteros de tres digitos y determina a cuanto es igual la suma de todos los digitos
+
+def suma_digitos_1(numero):
+    if(numero < 0):
+        return sum([int(x) for x in str(numero)[1:]])
+    else:
+        return sum([int(x) for x in str(numero)])
+
+def determinar_la_suma_de_todos_los_digitos_de_un_numero(numero_1 = 0):
+    if not numero_1:
+        return('ingrese valores validos, por favor')
+    elif (-100 < numero_1 < 100):
+        return('ingrese valores superiores a 3 digitos, por favor')
+    else:
+        suma_digitos = suma_digitos_1(numero_1)
+
+    return suma_digitos
+
+resultado = determinar_la_suma_de_todos_los_digitos_de_un_numero(99)
+print(resultado)
