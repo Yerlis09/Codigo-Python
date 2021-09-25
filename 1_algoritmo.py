@@ -211,3 +211,15 @@ def determinar_sum_de_todos_los_digitos_de_un_numero(numero_1 = 0):
 
 resultado = determinar_sum_de_todos_los_digitos_de_un_numero(99)
 print(resultado)
+
+# Leer 3 numeros enteros y determinar cual es el mayor.
+
+def retornar_numero_mayor_de_tres(numero1 = 0, numero2 = 0, numero3 = 0):
+    if not numero1 or not numero2 or not numero3:
+        return('ingrese valores validos, por favor')
+    else:
+        numero_mayor = max(numero1, numero2, numero3)
+        return(numero_mayor)
+
+resultado = retornar_numero_mayor_de_tres(-1, -5, -10)
+print(resultado)
