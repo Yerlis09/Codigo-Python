@@ -151,3 +151,41 @@ def determinar_si_dos_digitos_son_iguales(numero = 0):
 
 resultado = determinar_si_dos_digitos_son_iguales(33)
 print(resultado)
+
+# Leer dos numeros enteros de dos digitos y determinar si la suma de los dos numeros origina un numero par
+
+def determinar_si_la_suma_origina_un_numero_par(numero1 = 0, numero2 = 0):
+    if not numero1 or not numero2:
+        return('ingrese valores validos, por favor')
+    elif numero1 < 10 or numero2 < 10:
+            return 'Ingrese un valor de dos digitos, por favor'
+    else: 
+        resultado_suma = numero1 + numero2
+        if (resultado_suma % 2 == 0):
+            return 'Es par'
+        else: 
+            return 'No es par'
+
+resultado = determinar_si_la_suma_origina_un_numero_par(10,20)
+print(resultado)
+
+# Leer dos numeros enteros de dos digitos y determinar a cuanto es igual la suma de todos los digitos
+
+def suma_digitos(numero):
+    if(numero < 0):
+        return sum([int(x) for x in str(numero)[1:]])
+    else:
+        return sum([int(x) for x in str(numero)])
+
+def determinar_la_suma_de_todos_los_digitos(numero1 = 0, numero2 = 0):
+    if not numero1 or not numero2:
+        return('ingrese valores validos, por favor')
+    else:
+        suma_digitos_1 = suma_digitos(numero1)
+        suma_digitos_2 = suma_digitos(numero2)
+
+    return suma_digitos_1, suma_digitos_2, suma_digitos_1 + suma_digitos_2
+
+resultado = determinar_la_suma_de_todos_los_digitos(-1,28)
+print(resultado)
+
